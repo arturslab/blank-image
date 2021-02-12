@@ -5,7 +5,7 @@ This class allow you generate "blank" images on your page. It's good for develop
 For better performance, generated images are stored in cache folder (make sure to write access for cache folder).
 
 
-##Usage
+## Usage
 In your www server place files from this repository:
 - **blank_image.php** file
 - **cache** folder (make sure for write access)
@@ -13,13 +13,13 @@ In your www server place files from this repository:
 
 In your HTML add **img** tag with **src** atributes as showing in the **Example** below.
 
-##Example
+## Example
 
 `<img src="HTTP://DOMAIN.TLD/PATH_TO_THIS_SCRIPT/blank_image.php?height=400&width=600&fillcolor=color3&strokewidth=1&icon=camera">`
 
 ![Laravel debug queries](img/github_blank_image_screen.png)
 
-##Parameters
+## Parameters
 - **height**: height of generated image (in px)
 - **width**: width of generated image (in px)
 - **fillcolor**: fill color of generated images (values from color1 to color14 or random for random color)
