@@ -28,6 +28,11 @@ In your HTML add **img** tag with **src** attribute as showing in the **Example*
 - **text**: add text to image (optional).
 - **font**: choose font for image text. Values: `abril`, `anton`, `bangers`, `boogaloo`, `carterone`, `dancingscript`, `fredericka`, `indieflower`, `oswald`, `luckiestguy`, `righteous`, `roboto` or `random` for random font.
 
+## other
+You can use **showHelpImage()** method for generate helper image (with icons and font styles preview - see below).
+
+![Helper image](img/github_helper_image.png)
+
 ## Changelog
 **v1.1**
 - Added new icons (calendar, cart, heart, hourglass, store)
