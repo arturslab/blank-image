@@ -1,27 +1,43 @@
-![Laravel debug queries](img/github_header_blank_image.png)
+![Blank Image](img/github_header_blank_image.png)
 
 # Blank Image
-This class allow you generate "blank" images on your page. It's good for developers for prepare mockup HTML.
-For better performance, generated images are stored in cache folder (make sure to write access for cache folder).
-
+Simple class to generate "blank" images in your page. It's good for developers for prepare mockup HTML.
+For better performance, generated images are stored in cache folder.
 
 ## Usage
-In your www server place files from this repository:
-- **blank_image.php** file
-- **cache** folder (make sure for write access)
-- **resources** folder (with svg files)
+On your web server copy those files and folders from this repository:
+- **blank_image.php** main file
+- **cache** folder for storing cached images (make sure for write access to cache folder)
+- **resources/svg** folder with svg icons
+- **resources/fonts** folder with font files
 
-In your HTML add **img** tag with **src** atributes as showing in the **Example** below.
+In your HTML add **img** tag with **src** attribute as showing in the **Example** below.
 
 ## Example
 
-`<img src="HTTP://DOMAIN.TLD/PATH_TO_THIS_SCRIPT/blank_image.php?height=400&width=600&fillcolor=color3&strokewidth=1&icon=camera">`
+`<img src="HTTP://DOMAIN.TLD/PATH_TO_THIS_SCRIPT/blank_image.php?height=300&width=300&fillcolor=3&strokewidth=25&icon=camera&font=random&text=abcd" alt="Sample image">`
 
-![Laravel debug queries](img/github_blank_image_screen.png)
+![Blank image screenshot](img/github_blank_image_screen.png)
 
 ## Parameters
-- **height**: height of generated image (in px)
-- **width**: width of generated image (in px)
-- **fillcolor**: fill color of generated images (values from color1 to color14 or random for random color)
-- **strokewidth**: width (in px) for the borders of the generated image
-- **icon**: icon dislpayed in center of the blank image. (values:camera, chart, image, player, user. Default: camera)
+- **height**: height of generated image (in px). If empty: 150.
+- **width**: width of generated image (in px). If empty: 150.
+- **fillcolor**: fill color of generated images. Values from `0` to `13` or `random` for random color. If empty: 0 (white).
+- **strokewidth**: width (in px) for the borders of the generated image (optional).
+- **icon**: icon showing in center of the blank image (optional). Values: `calendar`, `camera`, `cart`, `chart`, `hourglass`, `image`, `map_mark`, `player`, `store`, `user` or `random` for random icon.
+- **text**: add text to image (optional).
+- **font**: choose font for image text. Values: `abril`, `anton`, `bangers`, `boogaloo`, `carterone`, `dancingscript`, `fredericka`, `indieflower`, `oswald`, `luckiestguy`, `righteous`, `roboto` or `random` for random font.
+
+## Changelog
+**v1.1**
+- Added new icons (calendar, cart, heart, hourglass, store)
+- Added text to image
+- Added method for delete all image files from cache folder
+- Different types of fonts for image text
+- Allow for showing blank image without any icon
+- Fixed overwrite cache property declaration
+- Removed unused methods
+- Added method for generate helper image (with icons and fonts previews)
+
+**v1.0**
+- First release

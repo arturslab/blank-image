@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <symbol id="ic_today_24px" viewBox="0 0 24 24">
+   <path d="m19 3h-1v-2h-2v2h-8v-2h-2v2h-1c-1.11 0-1.99 0.9-1.99 2l-0.01 14a2 2 0 0 0 2 2h14c1.1 0 2-0.9 2-2v-14c0-1.1-0.9-2-2-2zm0 16h-14v-11h14zm-12-9h5v5h-5z"/>
+  </symbol>
+ </defs>
+ <g transform="translate(-36.215 -158.67)">
+  <use id="blank_image_icon" transform="matrix(1.2 0 0 1.2 35.368 158.25)" width="100%" height="100%" fill="#ffffff" fill-opacity=".27059" xlink:href="#ic_today_24px"/>
+ </g>
+</svg>
