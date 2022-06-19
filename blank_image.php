@@ -52,7 +52,7 @@ class BlankImage
     /**
      * @var string
      */
-    private $version = '1.1';
+    private $version = '1.2';
 
     /**
      * @var array
@@ -165,6 +165,17 @@ class BlankImage
         $default['imageHeight'] = 1300;
         $default['itemsPadding'] = 20;
         $default['defaultFont'] = $this->getFontFile(array_values($this->fonts)[9]);
+
+        $params = [
+            'height' => 300,
+            'width' => 400,
+            'fillcolor' => 'color1',
+            'strokewidth' => 25,
+            'icon' => key($this->icons[0]),
+            'font' => key($this->fonts[0]),
+            'text' => 'Lorem ipsum',
+        ];
+        $exampleUrl = $_SERVER['SCRIPT_URI'] . '?' . http_build_query($params);
 
         // Draw main image
         $image = new \Imagick();
@@ -352,6 +363,8 @@ class BlankImage
         $drawText->setFillColor($default['headerColor']);
         $drawText->setFontSize($default['fontSize'] * 0.7);
         $image->annotateImage($drawText, $x, $y, $angle, '____________________');
+        $y = $y + $default['itemsPadding'];
+        $image->annotateImage($drawText, $x, $y, $angle, 'Example: ' . $exampleUrl);
         $y = $y + $default['itemsPadding'];
         $image->annotateImage($drawText, $x, $y, $angle, 'BlankImage ver. ' . $this->version);
 
@@ -665,7 +678,7 @@ $image = new BlankImage();
 /*
  * Example: show helper image
  */
-if ($_GET['test']) {
+if (!$_GET || isset($_GET['test'])) {
     $image->showHelpImage();
     die();
 }
