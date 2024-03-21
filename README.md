@@ -32,13 +32,17 @@ In your HTML add **img** tag with **src** attribute as showing in the **Example*
 - **text**: add text to image (optional).
 - **font**: choose font for image text. Values: `abril`, `anton`, `bangers`, `boogaloo`, `carterone`, `dancingscript`, `fredericka`, `indieflower`, `oswald`, `luckiestguy`, `righteous`, `roboto` or `random` for random font.
 
-## other
+## Other
 
 You can use **showHelpImage()** method for generate helper image (with icons and font styles preview - see below).
 
 ![Helper image](img/github_helper_image.png)
 
 ## Changelog
+
+**v1.2.1**
+
+- Compatibility with PHP 8.0
 
 **v1.2**
 
